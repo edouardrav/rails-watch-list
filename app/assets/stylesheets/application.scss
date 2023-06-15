@@ -11,6 +11,13 @@
 @import "components/index";
 @import "pages/index";
 
+.navbar {
+  height: 100px;
+  color: white;
+  background-color: #2f2f2f;
+  margin-bottom: 30px;
+}
+
 a.list {
   display: block;
   background-color: white;
@@ -42,7 +49,7 @@ div.list {
 }
 
 .movie {
-  width: 200px;
+  width: 250px;
   margin: 0 10px 10px 0;
   border-radius: 10px;
   overflow: hidden;
@@ -50,6 +57,7 @@ div.list {
   position: relative;
   box-shadow: 0 0 5px rgba(0,0,0,0.2);
   background-color: rgb(241, 241, 241);
+  padding-bottom: 50px;
 }
 
 .movie img {
@@ -83,9 +91,16 @@ div.list {
   }
 }
 
-.movie .comment {
-  color: #707070;
-  font-size: 1.2em;
+.comment {
+  color: #000000;
+  font-size: 1em;
+  background-color: rgba(255, 151, 139, 0.8);
+  width: 80%;
+  position: relative;
+  top: -30px;
+  padding: 10px 17px;
+  border-radius: 10px;
+  margin-left: 15px;
 }
 
 a.add {
