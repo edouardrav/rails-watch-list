@@ -11,12 +11,13 @@
   </head>
 
   <body>
-  <div class="navbar">
-    <h1><%= link_to "watchlists", lists_path %></h1>
-  </div>
-
-  <div class="container">
-    <%= yield %>
+  <div class="wrapper">
+    <div class="navba">
+      <h1><%= link_to "watchlists", lists_path %></h1>
+    </div>
+    <div class="container">
+      <%= yield %>
+    </div>
   </div>
   </body>
 </html>

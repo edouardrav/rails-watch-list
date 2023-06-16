@@ -1,11 +1,13 @@
 <div class="list">
-  <h1><%= @list.name %></h1>
+  <h1 style="background-image: linear-gradient(rgba(0,0,0,0.3),
+  rgba(0,0,0,0.3)), url('<%= cl_image_path @list.photo.key, crop: :fill %>')"><%= @list.name %></h1>
   <div class="movies">
     <% @list.bookmarks.each do |bookmark| %>
     <div>
       <div class="movie">
         <%= image_tag bookmark.movie.poster_url, alt: bookmark.movie.title %>
           <h2><%= bookmark.movie.title %></h2>
+          <p class="rating">⭐️ <strong><%= bookmark.movie.rating %></strong>/10</p>
           <p><%= bookmark.movie.overview %></p>
           <%= link_to bookmark_path(bookmark), data: { turbo_method: :delete, turbo_confirm: "Are you sure?" } do %>
             <i class="fa-solid fa-trash"></i>
